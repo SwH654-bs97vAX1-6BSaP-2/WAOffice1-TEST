@@ -23,7 +23,7 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
-    // 100 Roads custom TS
+    // 100 Roads custom TS Julia
     WA.room.onEnterLayer("floor").subscribe(() => {
         WA.room.hideLayer("roof");
         WA.room.hideLayer("walls-bg-front");
