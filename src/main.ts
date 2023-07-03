@@ -23,7 +23,18 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
-
+    // 100 Roads custom TS
+    WA.room.onEnterLayer("floor").subscribe(() => {
+        WA.room.hideLayer("roof");
+        WA.room.hideLayer("walls-bg-front");
+        WA.room.hideLayer("signs");
+      });
+    WA.room.onLeaveLayer("floor").subscribe(() => {
+        WA.room.showLayer("roof");
+        WA.room.showLayer("walls-bg-front");
+        WA.room.showLayer("signs");
+      });
+      
 }).catch(e => console.error(e));
 
 function closePopup(){
