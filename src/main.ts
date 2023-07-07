@@ -23,16 +23,38 @@ WA.onInit().then(() => {
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
+    
+    
     // 100 Roads custom TS Julia
-    WA.room.onEnterLayer("floor").subscribe(() => {
-        WA.room.hideLayer("roof");
-        WA.room.hideLayer("walls-bg-front");
-        WA.room.hideLayer("signs");
+    WA.room.onEnterLayer("floor1").subscribe(() => {
+        WA.room.hideLayer("roof1");
+        WA.room.hideLayer("walls-bg-front1");
+        WA.room.hideLayer("signs1");
       });
-    WA.room.onLeaveLayer("floor").subscribe(() => {
-        WA.room.showLayer("roof");
-        WA.room.showLayer("walls-bg-front");
-        WA.room.showLayer("signs");
+    WA.room.onLeaveLayer("floor1").subscribe(() => {
+        WA.room.showLayer("roof1");
+        WA.room.showLayer("walls-bg-front1");
+        WA.room.showLayer("signs1");
+      });
+    WA.room.onEnterLayer("floor2").subscribe(() => {
+        WA.room.hideLayer("roof2");
+        WA.room.hideLayer("walls-bg-front2");
+        WA.room.hideLayer("signs2");
+      });
+    WA.room.onLeaveLayer("floor2").subscribe(() => {
+        WA.room.showLayer("roof2");
+        WA.room.showLayer("walls-bg-front2");
+        WA.room.showLayer("signs2");
+      });
+    WA.room.onEnterLayer("rooms_floor").subscribe(() => {
+        WA.room.hideLayer("facade-furniture-bg");
+        WA.room.hideLayer("facade-furniture-fg");
+        WA.room.hideLayer("facade");
+      });
+    WA.room.onLeaveLayer("rooms_floor").subscribe(() => {
+        WA.room.showLayer("facade-furniture-bg");
+        WA.room.showLayer("facade-furniture-fg");
+        WA.room.showLayer("facade");
       });
       
 }).catch(e => console.error(e));
