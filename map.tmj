@@ -22088,11 +22088,11 @@
         {
          "columns":64,
          "firstgid":170866,
-         "image":"tilesets\/WA-furniture.png",
+         "image":"tilesets\/wa-furniture.png",
          "imageheight":1504,
          "imagewidth":2048,
          "margin":0,
-         "name":"WA-furniture",
+         "name":"wa-furniture",
          "spacing":0,
          "tilecount":3008,
          "tileheight":32,
